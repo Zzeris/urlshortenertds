@@ -20,7 +20,5 @@ public class UrlController {
     }
 
     @GetMapping
-    public List<Url> getUrls(){
-        return repository.findAll();
-    }
+    public List<Url> getUrls(){ return repository.findAll(); }
 }

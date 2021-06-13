@@ -33,9 +33,9 @@ public class UrlControllerTests {
     public void testListUrls() throws Exception{
         List<Url> listUrls = new ArrayList<>();
 
-        listUrls.add(new Url("xxx"));
-        listUrls.add(new Url("yyy"));
-        listUrls.add(new Url("zzz"));
+        listUrls.add(new Url(1,"xxx"));
+        listUrls.add(new Url(2,"yyy"));
+        listUrls.add(new Url(3,"zzz"));
 
         Mockito.when(urlRepository.findAll()).thenReturn(listUrls);
 
@@ -46,8 +46,8 @@ public class UrlControllerTests {
 
     @Test
     public void testAddUrl() throws Exception{
-        Url newUrl = new Url("xxx");
-        Url addUrl = new Url("xxx");
+        Url newUrl = new Url(1,"xxx");
+        Url addUrl = new Url(1,"xxx");
 
         Mockito.when(urlRepository.save(newUrl)).thenReturn(addUrl);
 

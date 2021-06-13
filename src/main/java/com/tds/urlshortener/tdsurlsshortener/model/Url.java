@@ -15,5 +15,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "Url")
 public class Url {
+
+    @Id
+    private Integer id;
     private String url;
 }
